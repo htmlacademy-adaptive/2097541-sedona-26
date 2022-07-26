@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Сергей Башорин](https://up.htmlacademy.ru/adaptive/26/user/2097541).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Остаповец](https://htmlacademy.ru/profile/seraphim).
 
 ---
 
