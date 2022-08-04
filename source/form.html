@@ -4,39 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <title>Седона. Оставьте свой отзыв</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page__body">
   <header class="main-header">
     <a class="main-header__logo logo">
       <img class="logo__image" src="#" alt="Логотип Седоны">
     </a>
-    <nav class="main-nav">
+    <nav class="main-header__nav main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <div class="main-nav__container">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Фото и видео</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Форма отзыва</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="https://htmlacademy.ru">HtmlAcademy</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a class="site-list__link" href="index.html">Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="catalog.html">Фото и видео</a>
+        </li>
+        <li class="site-list__item site-list__item--current">
+          <a class="site-list__link">Форма отзыва</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="https://htmlacademy.ru">HtmlAcademy</a>
+        </li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <div class="main-welcome">
-      <img class="main-welcome__image" src="#" иalt="Надпись Седона">
+    <div class="intro">
+      <img class="intro__image" src="#" alt="Надпись Седона">
     </div>
     <section class="review">
       <div class="review__container">
@@ -45,112 +44,111 @@
           вами достопримечательностях</p>
         <form class="review__form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="review__group person">
-            <legend class="person__title title">Представьтесь:</legend>
+            <legend class="person__title">Представьтесь:</legend>
             <div class="person__wrapper">
-              <label class="person__label" for="name-id">
-                <p class="person__description">Имя*:</p>
+              <label class="person__label" for="name">
+                Имя*:
               </label>
-              <input class="person__input" type="text" name="name" id="name-id" required>
+              <input class="person__input" type="text" name="name" id="name" required>
             </div>
 
             <div class="person__wrapper">
-              <label class="person__label" for="surname-id">
-                <p class="person__description">Фамилия*:</p>
+              <label class="person__label" for="surname">
+                Фамилия*:
               </label>
-              <input class="person__input" type="text" name="surname" id="surname-id" required>
+              <input class="person__input" type="text" name="surname" id="surname" required>
             </div>
 
             <div class="person__wrapper">
-              <label class="person__label" for="patronymic-id">
-                <p class="person__description">Отчество:</p>
+              <label class="person__label" for="patronymic">
+                Отчество:
               </label>
-              <input class="person__input" type="text" name="patronymic" id="patronymic-id" required>
+              <input class="person__input" type="text" name="patronymic" id="patronymic" required>
             </div>
           </fieldset>
 
           <fieldset class="review__group contacts">
-            <legend class="contacts__title title">Контактная информация:</legend>
+            <legend class="contacts__title">Контактная информация:</legend>
             <div class="contacts__wrapper">
-              <label class="contacts__label" for="phone-id">
-                <p class="contacts__description">Контактный телефон*:</p>
+              <label class="contacts__label" for="phone">
+                Контактный телефон*:
               </label>
-              <input class="contacts__input" type="tel" name="phone" id="phone-id" placeholder="Введите телефон"
-                required>
+              <input class="contacts__input" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
             </div>
 
             <div class="contacts__wrapper">
-              <label class="contacts__label" for="e-mail-id">
-                <p class="contacts__description">Электронная почта*:</p>
+              <label class="contacts__label" for="e-mail">
+                Электронная почта*:
               </label>
-              <input class="contacts__input" type="email" name="e-mail" id="e-mail-id" placeholder="Введите e-mail"
+              <input class="contacts__input" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail"
                 required>
             </div>
           </fieldset>
 
           <fieldset class="review__group impression">
-            <legend class="impression__title title">Ваше общее впечатление:</legend>
+            <legend class="impression__title">Ваше общее впечатление:</legend>
             <div class="impression__wrapper">
-              <input class="impression__input" type="radio" name="impression" id="impression-positive-id" checked>
-              <label class="impression__label" for="impression-positive-id">
-                <p class="impression__description">Скорее положительное</p>
+              <label class="impression__label radio-label">
+                <input class="radio-label__input" type="radio" name="impression" checked>
+                <span class="radio-label__description">Скорее положительное</span>
               </label>
             </div>
 
             <div class="impression__wrapper">
-              <input class="impression__input" type="radio" name="impression" id="impression-negative-id">
-              <label class="impression__label" for="impression-negative-id">
-                <p class="impression__description">Скорее отрицательное</p>
+              <label class="impression__label radio-label">
+                <input class="radio-label__input" type="radio" name="impression">
+                <span class="radio-label__description">Скорее отрицательное</span>
               </label>
             </div>
 
             <div class="impression__wrapper">
-              <input class="impression__input" type="radio" name="impression" id="impression-neutral-id">
-              <label class="impression__label" for="impression-neutral-id">
-                <p class="impression__description">Затрудняюсь ответить</p>
+              <label class="impression__label radio-label">
+                <input class="radio-label__input" type="radio" name="impression">
+                <span class="radio-label__description">Затрудняюсь ответить</span>
               </label>
             </div>
           </fieldset>
 
           <fieldset class="review__group attractions">
-            <legend class="attractions__title title">Посещенные достопримечательности:</legend>
+            <legend class="attractions__title">Посещенные достопримечательности:</legend>
             <div class="attractions__wrapper">
-              <input class="attractions__input" type="checkbox" name="bridge" id="bridge-id" checked>
-              <label class="attractions__label" for="bridge-id">
-                <p class="attractions__description">Мост Дьявола</p>
+              <label class="attractions__label checkbox-label">
+                <input class="checkbox-label__input" type="checkbox" name="bridge" checked>
+                <span class="checkbox-label__description">Мост Дьявола</span>
               </label>
             </div>
 
             <div class="attractions__wrapper">
-              <input class="attractions__input" type="checkbox" name="mountain" id="mountain-id" checked>
-              <label class="attractions__label" for="mountain-id">
-                <p class="attractions__description">Гора-Колокол</p>
+              <label class="attractions__label checkbox-label">
+                <input class="checkbox-label__input" type="checkbox" name="mountain" checked>
+                <span class="checkbox-label__description">Гора-Колокол</span>
               </label>
             </div>
 
             <div class="attractions__wrapper">
-              <input class="attractions__input" type="checkbox" name="park" id="park-id" checked>
-              <label class="attractions__label" for="park-id">
-                <p class="attractions__description">Слайд-парк</p>
+              <label class="attractions__label checkbox-label">
+                <input class="checkbox-label__input" type="checkbox" name="park" checked>
+                <span class="checkbox-label__description">Слайд-парк</span>
               </label>
             </div>
 
             <div class="attractions__wrapper">
-              <input class="attractions__input" type="checkbox" name="rocks" id="rocks-id">
-              <label class="attractions__label" for="rocks-id">
-                <p class="attractions__description">Красные скалы</p>
+              <label class="attractions__label checkbox-label">
+                <input class="checkbox-label__input" type="checkbox" name="rocks">
+                <span class="checkbox-label__description">Красные скалы</span>
               </label>
             </div>
           </fieldset>
 
           <fieldset class="review__group emotions">
-            <legend class="emotions__title title">Опишите свои эмоции:</legend>
+            <legend class="emotions__title">Опишите свои эмоции:</legend>
             <div class="emotions__wrapper">
               <textarea class="emotions__input" name="emotions"
                 placeholder="Опишите подробно все свои восторги"> </textarea>
             </div>
           </fieldset>
 
-          <button class="review__button button" type="submit">Отправить отзыв</button>
+          <button class="review__button" type="submit">Отправить отзыв</button>
           <p class="review__legend">* — обязательные поля</p>
         </form>
       </div>
