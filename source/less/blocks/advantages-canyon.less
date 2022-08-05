@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+.advantages-canyon__item {
+  .last-element-margin();
+}
+
 .advantages-canyon__title {
   .title();
   margin-bottom: 11px;
@@ -17,8 +21,30 @@
 .advantages-canyon__number {
   display: block;
   margin-bottom: 17px;
+  font-weight: 700;
 }
 
 .advantages-canyon__description {
   margin-top: 0;
+  margin-bottom: 11px;
+}
+
+.advantages-canyon__image {
+  display: block;
+}
+
+.advantages-canyon_item {
+  .last-element-margin();
+
+  &--background-color {
+    background: #81b3d2;
+  }
+
+  &--background-color2 {
+    background: #eeeeee;
+  }
+
+  &--text-color {
+    color: #ffffff;
+  }
 }

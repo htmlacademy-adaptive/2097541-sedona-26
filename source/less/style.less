@@ -25,6 +25,11 @@
 @import "./blocks/intro.less";
 @import "./blocks/advantages.less";
 @import "./blocks/advantages-canyon.less";
+@import "./blocks/search-hotel.less";
+@import "./blocks/sedona-map.less";
+@import "./blocks/main-footer.less";
+@import "./blocks/social.less";
+@import "./blocks/copyright.less";
 
 .visually-hidden {
   border: 0;
@@ -42,6 +47,11 @@
   line-height: 26px;
   font-weight: 700;
   color: #000000;
-  text-transform: uppercase;
 }
 
+.last-element-margin() {
+  & :last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+}
