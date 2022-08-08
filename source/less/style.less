@@ -1,1 +1,73 @@
-// Начните писать стили здесь
+@import "./blocks/page.less";
+@import "./blocks/main-header.less";
+@import "./blocks/main-nav.less";
+@import "./blocks/site-list.less";
+@import "./blocks/logo.less";
+@import "./blocks/page-body.less";
+@import "./blocks/main-container.less";
+@import "./blocks/intro.less";
+@import "./blocks/advantages.less";
+@import "./blocks/advantages-canyon.less";
+@import "./blocks/search-hotel.less";
+@import "./blocks/sedona-map.less";
+@import "./blocks/main-footer.less";
+@import "./blocks/social.less";
+@import "./blocks/copyright.less";
+@import "./blocks/advantages-canyon_wrapper.less";
+@import "./blocks/like.less";
+@import "./blocks/card.less";
+@import "./blocks/video.less";
+@import "./blocks/photo.less";
+@import "./blocks/intro-short.less";
+@import "./blocks/review.less";
+@import "./blocks/person.less";
+@import "./blocks/contacts.less";
+@import "./blocks/impression.less";
+@import "./blocks/attractions.less";
+@import "./blocks/emotions.less";
+
+@font-face {
+  font-display: swap;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsansbold.woff2") format("woff2");
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.title() {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.last-element-margin-bottom() {
+  & :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.last-element-margin-right() {
+  & :last-child {
+    margin-right: 0;
+  }
+}

@@ -4,15 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Седона. Оставьте свой отзыв</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page__body">
   <header class="main-header">
     <a class="main-header__logo logo">
-      <img class="logo__image" src="#" alt="Логотип Седоны">
+      <img class="logo__image" src="./img/logo.svg" height="96" width="185" alt="Логотип Седоны">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
+        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z" fill="#81B3D2" />
+        </svg>
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__container">
@@ -23,8 +27,8 @@
           <li class="site-list__item">
             <a class="site-list__link" href="catalog.html">Фото и видео</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Форма отзыва</a>
+          <li class="site-list__item site-list__item--current">
+            <a class="site-list__link">Форма отзыва</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="https://htmlacademy.ru">HtmlAcademy</a>
@@ -35,148 +39,148 @@
   </header>
 
   <main>
-    <div class="main-welcome">
-      <img class="main-welcome__image" src="#" иalt="Надпись Седона">
+    <div class="intro-short">
+      <img class="intro-short__image" src="./img/intro-image-short.svg" alt="Надпись Седона">
     </div>
     <section class="review">
-      <div class="review__container">
         <h1 class="review__title">Оставьте свой отзыв</h1>
         <p class="review__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных
           вами достопримечательностях</p>
         <form class="review__form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="review__group person">
-            <legend class="person__title title">Представьтесь:</legend>
-            <div class="person__wrapper">
-              <label class="person__label" for="name-id">
-                <p class="person__description">Имя*:</p>
-              </label>
-              <input class="person__input" type="text" name="name" id="name-id" required>
-            </div>
+            <h2 class="person__title">Представьтесь:</h2>
 
-            <div class="person__wrapper">
-              <label class="person__label" for="surname-id">
-                <p class="person__description">Фамилия*:</p>
+              <label class="person__label">
+                Имя*:
+                <input class="person__input" type="text" name="name" required>
               </label>
-              <input class="person__input" type="text" name="surname" id="surname-id" required>
-            </div>
 
-            <div class="person__wrapper">
-              <label class="person__label" for="patronymic-id">
-                <p class="person__description">Отчество:</p>
+              <label class="person__label">
+                Фамилия*:
+                <input class="person__input" type="text" name="surname" required>
               </label>
-              <input class="person__input" type="text" name="patronymic" id="patronymic-id" required>
-            </div>
+
+              <label class="person__label">
+                Отчество:
+              <input class="person__input" type="text" name="patronymic" required>
+              </label>
           </fieldset>
 
           <fieldset class="review__group contacts">
-            <legend class="contacts__title title">Контактная информация:</legend>
-            <div class="contacts__wrapper">
-              <label class="contacts__label" for="phone-id">
-                <p class="contacts__description">Контактный телефон*:</p>
+            <h2 class="contacts__title">Контактная информация:</h2>
+              <label class="contacts__label">
+                Контактный телефон*:
+                <input class="contacts__input" type="tel" name="phone" placeholder="Введите телефон" required>
               </label>
-              <input class="contacts__input" type="tel" name="phone" id="phone-id" placeholder="Введите телефон"
-                required>
-            </div>
 
-            <div class="contacts__wrapper">
-              <label class="contacts__label" for="e-mail-id">
-                <p class="contacts__description">Электронная почта*:</p>
-              </label>
-              <input class="contacts__input" type="email" name="e-mail" id="e-mail-id" placeholder="Введите e-mail"
+              <label class="contacts__label">
+                Электронная почта*:
+                <input class="contacts__input" type="email" name="e-mail" placeholder="Введите e-mail"
                 required>
-            </div>
+              </label>
           </fieldset>
 
           <fieldset class="review__group impression">
-            <legend class="impression__title title">Ваше общее впечатление:</legend>
-            <div class="impression__wrapper">
-              <input class="impression__input" type="radio" name="impression" id="impression-positive-id" checked>
-              <label class="impression__label" for="impression-positive-id">
-                <p class="impression__description">Скорее положительное</p>
+            <h2 class="impression__title">Ваше общее впечатление:</h2>
+              <label class="impression__label radio-label">
+                <input class="radio-label__input" type="radio" name="impression" checked>
+                <span class="radio-label__description">Скорее положительное</span>
               </label>
-            </div>
 
-            <div class="impression__wrapper">
-              <input class="impression__input" type="radio" name="impression" id="impression-negative-id">
-              <label class="impression__label" for="impression-negative-id">
-                <p class="impression__description">Скорее отрицательное</p>
+              <label class="impression__label radio-label">
+                <input class="radio-label__input" type="radio" name="impression">
+                <span class="radio-label__description">Скорее отрицательное</span>
               </label>
-            </div>
 
-            <div class="impression__wrapper">
-              <input class="impression__input" type="radio" name="impression" id="impression-neutral-id">
-              <label class="impression__label" for="impression-neutral-id">
-                <p class="impression__description">Затрудняюсь ответить</p>
+              <label class="impression__label radio-label">
+                <input class="radio-label__input" type="radio" name="impression">
+                <span class="radio-label__description">Затрудняюсь ответить</span>
               </label>
-            </div>
           </fieldset>
 
           <fieldset class="review__group attractions">
-            <legend class="attractions__title title">Посещенные достопримечательности:</legend>
-            <div class="attractions__wrapper">
-              <input class="attractions__input" type="checkbox" name="bridge" id="bridge-id" checked>
-              <label class="attractions__label" for="bridge-id">
-                <p class="attractions__description">Мост Дьявола</p>
-              </label>
-            </div>
+            <h2 class="attractions__title">Посещенные достопримечательности:</h2>
 
-            <div class="attractions__wrapper">
-              <input class="attractions__input" type="checkbox" name="mountain" id="mountain-id" checked>
-              <label class="attractions__label" for="mountain-id">
-                <p class="attractions__description">Гора-Колокол</p>
+              <label class="attractions__label checkbox-label">
+                <input class="checkbox-label__input" type="checkbox" name="bridge" checked>
+                <span class="checkbox-label__description">Мост Дьявола</span>
               </label>
-            </div>
 
-            <div class="attractions__wrapper">
-              <input class="attractions__input" type="checkbox" name="park" id="park-id" checked>
-              <label class="attractions__label" for="park-id">
-                <p class="attractions__description">Слайд-парк</p>
+              <label class="attractions__label checkbox-label">
+                <input class="checkbox-label__input" type="checkbox" name="mountain" checked>
+                <span class="checkbox-label__description">Гора-Колокол</span>
               </label>
-            </div>
 
-            <div class="attractions__wrapper">
-              <input class="attractions__input" type="checkbox" name="rocks" id="rocks-id">
-              <label class="attractions__label" for="rocks-id">
-                <p class="attractions__description">Красные скалы</p>
+              <label class="attractions__label checkbox-label">
+                <input class="checkbox-label__input" type="checkbox" name="park" checked>
+                <span class="checkbox-label__description">Слайд-парк</span>
               </label>
-            </div>
+
+              <label class="attractions__label checkbox-label">
+                <input class="checkbox-label__input" type="checkbox" name="rocks">
+                <span class="checkbox-label__description">Красные скалы</span>
+              </label>
+
           </fieldset>
 
           <fieldset class="review__group emotions">
-            <legend class="emotions__title title">Опишите свои эмоции:</legend>
-            <div class="emotions__wrapper">
+            <h2 class="emotions__title">Опишите свои эмоции:</h2>
               <textarea class="emotions__input" name="emotions"
                 placeholder="Опишите подробно все свои восторги"> </textarea>
-            </div>
           </fieldset>
 
-          <button class="review__button button" type="submit">Отправить отзыв</button>
+          <button class="review__button" type="submit">Отправить отзыв</button>
           <p class="review__legend">* — обязательные поля</p>
         </form>
-      </div>
     </section>
   </main>
 
   <footer class="main-footer">
-    <div class="main-footer__container">
-      <p class="main-footer__hashtag hashtag">#VISITSEDONA</p>
-      <ul class="main-footer__list social">
-        <li class="social__item">
-          <a class="social__vk" href="#">Вконтакте</a>
-        </li>
-        <li class="social__item">
-          <a class="social__telegram" href="#">Телеграм</a>
-        </li>
-        <li class="social__item">
-          <a class="social__youtube" href="#">YouTube</a>
-        </li>
-      </ul>
-      <div class="main-footer__copyright copyright">
-        <span class="copyright__description">Разработано</span>
-        <a class="copyright__link logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="logo-htmlacademy-image" src="#" alt="Логотип HtmlAcademy">
+    <p class="main-footer__hashtag">#VISITSEDONA</p>
+    <ul class="main-footer__list social">
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#a)">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M23.45 5.95c.17-.55 0-.95-.8-.95h-2.62c-.67 0-.98.35-1.14.73 0 0-1.34 3.2-3.23 5.27-.61.6-.89.8-1.22.8-.17 0-.42-.2-.42-.74V5.95c0-.66-.18-.95-.74-.95H9.15c-.42 0-.67.3-.67.6 0 .61.95.76 1.05 2.5v3.8c0 .84-.16.99-.5.99-.88 0-3.05-3.21-4.33-6.89-.25-.71-.5-1-1.17-1H.9c-.75 0-.9.35-.9.73 0 .68.89 4.07 4.14 8.55C6.32 17.34 9.38 19 12.15 19c1.67 0 1.88-.37 1.88-1v-2.32c0-.73.16-.88.69-.88.38 0 1.05.2 2.61 1.67C19.11 18.22 19.4 19 20.41 19h2.62c.75 0 1.13-.37.91-1.1-.24-.72-1.09-1.77-2.21-3.02-.62-.7-1.54-1.47-1.81-1.86-.4-.49-.28-.7 0-1.14 0 0 3.2-4.43 3.53-5.93Z"
+                fill="#fff" />
+            </g>
+            <defs>
+              <clipPath id="a">
+                <path fill="#fff" d="M0 0h24v24H0z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="visually-hidden">Вконтакте</span>
         </a>
-      </div>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m22.44 4.62-3.17 14.95c-.24 1.05-.86 1.31-1.75.82l-4.83-3.56-2.33 2.24c-.25.26-.47.47-.97.47l.35-4.91 8.95-8.09c.39-.35-.09-.54-.6-.2L7.01 13.32l-4.76-1.49c-1.04-.32-1.05-1.03.22-1.53L21.1 3.11c.87-.32 1.62.2 1.34 1.51Z"
+              fill="#fff" />
+          </svg>
+          <span class="visually-hidden">Телеграм</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M19.18 5H4.81C3.31 5 2 6.3 2 7.8v8.3C2 17.7 3.3 19 4.81 19h14.37A2.8 2.8 0 0 0 22 16.2V7.8c.1-1.5-1.2-2.8-2.8-2.8ZM9.03 15.4V8.6l6.84 3.4-6.84 3.4Z"
+              fill="#fff" />
+          </svg>
+          <span class="visually-hidden">YouTube</span>
+        </a>
+      </li>
+    </ul>
+    <div class="main-footer__copyright copyright">
+      <span class="copyright__description">Разработано</span>
+      <a class="copyright__link logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
+        <img class="logo-htmlacademy-image" src="./img/htmlacademy.svg" alt="Логотип HtmlAcademy">
+      </a>
     </div>
   </footer>
 </body>
