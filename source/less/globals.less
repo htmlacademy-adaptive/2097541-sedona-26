@@ -1,4 +1,4 @@
-body {
+.page__body {
   background: #ffffff;
   color: #333333;
   display: flex;
@@ -7,10 +7,14 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  margin: 0;
+  margin: 0 auto;
   min-height: 100%;
   width: 320px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
 }
 
 .visually-hidden {
