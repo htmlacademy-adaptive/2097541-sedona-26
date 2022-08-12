@@ -7,8 +7,12 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(5, 153px);
-    align-self: center;
+    text-align: center;
     padding-left: 1.5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(5, 240px);
   }
 }
 
@@ -26,6 +30,13 @@
     justify-self: center;
     padding: 18px 20px 17px;
     width: 153px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-self: center;
+    padding: 18px 20px 17px;
+    width: 240px;
     box-sizing: border-box;
   }
 }
