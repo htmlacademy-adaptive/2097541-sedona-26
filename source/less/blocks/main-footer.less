@@ -4,6 +4,11 @@
   text-align: center;
   flex-direction: column;
   padding: 38px 20px 18px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    padding: 36px 60px 45px;
+  }
 }
 
 .main-footer__hashtag {
@@ -11,4 +16,14 @@
   font-size: 21px;
   margin-top: 0;
   margin-bottom: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 97px;
+  }
+}
+
+.main-footer__list {
+  @media (min-width: @tablet-width) {
+    margin-right: 100px;
+  }
 }

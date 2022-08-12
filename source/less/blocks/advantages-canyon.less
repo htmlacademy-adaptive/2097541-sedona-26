@@ -6,6 +6,20 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.advantages-canyon__description-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 256px;
+  }
 }
 
 .advantages-canyon__title {
@@ -28,10 +42,27 @@
 
 .advantages-canyon__image {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    &--order {
+      order: -1;
+    }
+  }
 }
 
 .advantages-canyon__item {
   .last-element-margin-bottom();
+
+  @media (min-width: @tablet-width) {
+    width: 256px;
+  }
+
+  &--big {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      width: 768px;
+    }
+  }
 
   &--background-blue {
     background: #81b3d2;
@@ -47,9 +78,17 @@
 
   &--padding-city {
     padding: 54px 22px 40px 16px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0;
+    }
   }
 
   &--padding-bridge {
     padding: 39px 16px 35px 15px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0;
+    }
   }
 }
