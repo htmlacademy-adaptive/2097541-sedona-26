@@ -3,6 +3,7 @@
 
   @media (min-width: @tablet-width) {
     width: 324px;
+    background-color: #f2f2f2;
 
     &--stretched {
       width: 648px;
@@ -11,6 +12,9 @@
 
   @media (min-width: @desktop-width) {
     width: 400px;
+    background-color: #ffffff;
+    position: relative;
+    margin-bottom: 0;
 
     &--stretched {
       width: 1200px;
@@ -25,6 +29,10 @@
   color: #000000;
   margin-top: 0;
   margin-bottom: 0;
+
+  @media (min-width: @desktop-width) {
+    color: inherit;
+  }
 }
 
 .card__description {
@@ -39,4 +47,20 @@
 
 .card__wrapper-image {
   margin-bottom: 15px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.card__wrapper {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+  }
 }

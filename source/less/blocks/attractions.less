@@ -4,12 +4,32 @@
   padding: 24px 0;
   margin: 0;
   .last-element-margin-bottom();
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+  }
+}
+
+.attractions__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .attractions__label {
   .title();
   display: flex;
   margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 224px;
+  }
 }
 
 .attractions__title {
