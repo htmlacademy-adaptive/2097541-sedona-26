@@ -1,5 +1,9 @@
 .main-nav {
   padding-top: 17px;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
 }
 
 .main-nav__toggle {
@@ -7,8 +11,20 @@
   margin-right: 20px;
   margin-left: auto;
   margin-bottom: 17px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .main-nav__container {
   display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.main-nav__list {
+  margin: 0 auto;
 }
