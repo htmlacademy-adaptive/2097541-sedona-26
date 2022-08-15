@@ -49,22 +49,22 @@
       <p class="review__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных
         вами достопримечательностях</p>
       <form class="review__form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="review__group person">
-          <h2 class="person__title">Представьтесь:</h2>
+        <fieldset class="review__group contacts">
+          <h2 class="contacts__title">Представьтесь:</h2>
 
-          <label class="person__label">
+          <label class="contacts__label">
             Имя*:
-            <input class="person__input" type="text" name="name" required>
+            <input class="contacts__input" type="text" name="name" required>
           </label>
 
-          <label class="person__label">
+          <label class="contacts__label">
             Фамилия*:
-            <input class="person__input" type="text" name="surname" required>
+            <input class="contacts__input" type="text" name="surname" required>
           </label>
 
-          <label class="person__label">
+          <label class="contacts__label">
             Отчество:
-            <input class="person__input" type="text" name="patronymic" required>
+            <input class="contacts__input" type="text" name="patronymic" required>
           </label>
         </fieldset>
 
@@ -85,17 +85,17 @@
           <h2 class="impression__title">Ваше общее впечатление:</h2>
           <div class="impression__wrapper">
             <label class="impression__label radio-label">
-              <input class="radio-label__input" type="radio" name="impression" checked>
+              <input class="radio-label__input" type="radio" name="impression" value="positive" checked>
               <span class="radio-label__description">Скорее положительное</span>
             </label>
 
             <label class="impression__label radio-label">
-              <input class="radio-label__input" type="radio" name="impression">
+              <input class="radio-label__input" type="radio" name="impression" value="negativ">
               <span class="radio-label__description">Скорее отрицательное</span>
             </label>
 
             <label class="impression__label radio-label">
-              <input class="radio-label__input" type="radio" name="impression">
+              <input class="radio-label__input" type="radio" name="impression" value="indetermination">
               <span class="radio-label__description">Затрудняюсь ответить</span>
             </label>
           </div>
@@ -105,22 +105,22 @@
           <h2 class="attractions__title">Посещенные достопримечательности:</h2>
           <div class="attractions__wrapper">
             <label class="attractions__label checkbox-label">
-              <input class="checkbox-label__input" type="checkbox" name="bridge" checked>
+              <input class="checkbox-label__input" type="checkbox" name="bridge" value="Devil's bridge" checked>
               <span class="checkbox-label__description">Мост Дьявола</span>
             </label>
 
             <label class="attractions__label checkbox-label">
-              <input class="checkbox-label__input" type="checkbox" name="mountain" checked>
+              <input class="checkbox-label__input" type="checkbox" name="mountain" value="mountain-bell" checked>
               <span class="checkbox-label__description">Гора-Колокол</span>
             </label>
 
             <label class="attractions__label checkbox-label">
-              <input class="checkbox-label__input" type="checkbox" name="park" checked>
+              <input class="checkbox-label__input" type="checkbox" name="park" value="park" checked>
               <span class="checkbox-label__description">Слайд-парк</span>
             </label>
 
             <label class="attractions__label checkbox-label">
-              <input class="checkbox-label__input" type="checkbox" name="rocks">
+              <input class="checkbox-label__input" type="checkbox" name="rocks" value="red rocks">
               <span class="checkbox-label__description">Красные скалы</span>
             </label>
           </div>
@@ -129,7 +129,7 @@
         <fieldset class="review__group emotions">
           <h2 class="emotions__title">Опишите свои эмоции:</h2>
           <textarea class="emotions__input" name="emotions"
-            placeholder="Опишите подробно все свои восторги"> </textarea>
+            placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
 
         <button class="review__button" type="submit">Отправить отзыв</button>
@@ -181,8 +181,8 @@
     </ul>
     <div class="main-footer__copyright copyright">
       <span class="copyright__description">Разработано</span>
-      <a class="copyright__link logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="logo-htmlacademy-image" src="./img/htmlacademy.svg" alt="Логотип HtmlAcademy">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img class="copyright__image" src="./img/htmlacademy.svg" alt="Логотип HtmlAcademy">
       </a>
     </div>
   </footer>

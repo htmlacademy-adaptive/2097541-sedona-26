@@ -5,20 +5,14 @@
   padding-left: 0;
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(5, 153px);
+    flex-direction: row;
+    flex-wrap: wrap;
     text-align: center;
     padding-left: 1.5px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(5, 240px);
-  }
-}
-
-.site-list__space {
-  @media (min-width: @tablet-width) {
-    grid-row: span 10;
+    padding-left: 0;
   }
 }
 
@@ -31,6 +25,10 @@
     padding: 18px 20px 17px;
     width: 153px;
     box-sizing: border-box;
+
+    &:nth-child(4n+2) {
+      margin-right: 153px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -38,6 +36,10 @@
     padding: 18px 20px 17px;
     width: 240px;
     box-sizing: border-box;
+
+    &:nth-child(4n+2) {
+      margin-right: 240px;
+    }
   }
 }
 
