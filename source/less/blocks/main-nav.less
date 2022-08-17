@@ -90,6 +90,20 @@
   @media (min-width: 768px) {
     display: block;
   }
+
+  & :last-child ::after {
+    @media (max-width: 767px) {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 7px;
+      mix-blend-mode: normal;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+      opacity: 0.15;
+    }
+  }
 }
 
 .main-nav__list {
