@@ -1,7 +1,7 @@
 .photo {
   display: flex;
   flex-direction: column;
-  padding: 30px 20px 25px;
+  padding: 30px 20px 0;
   margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
@@ -18,11 +18,14 @@
   padding-top: 24px;
   padding-left: 0;
   list-style-type: none;
-  .last-element-margin-bottom();
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  & li:last-child {
+    margin-bottom: 25px;
   }
 }
 
