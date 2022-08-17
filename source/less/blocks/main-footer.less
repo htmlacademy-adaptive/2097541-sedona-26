@@ -7,7 +7,13 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    padding: 36px 60px 45px;
+    padding: 36px 60px 36px 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    padding: 36px 120px 36px 104px;
+    justify-content: space-between;
   }
 }
 
@@ -19,11 +25,16 @@
 
   @media (min-width: @tablet-width) {
     margin-right: 97px;
+    margin-bottom: 5px;
   }
 }
 
 .main-footer__list {
   @media (min-width: @tablet-width) {
     margin-right: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
   }
 }
