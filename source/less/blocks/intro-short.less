@@ -1,6 +1,15 @@
 .intro-short {
   background-image: url("../img/intro-background-short.jpg");
   background-repeat: no-repeat;
+  min-height: 158px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 290px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 518px;
+  }
 }
 
 .intro-short__image {
@@ -9,4 +18,12 @@
   padding-bottom: 67px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 95px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 101px;
+  }
 }
