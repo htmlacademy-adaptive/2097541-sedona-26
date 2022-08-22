@@ -1,12 +1,36 @@
 .intro {
   background-image: url("../img/intro-background.jpg");
   background-repeat: no-repeat;
+  height: 389px;
+  background-color: #5d3434bf;
+  background-position: 50% -50px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/intro-triangle.svg.svg");
+    height: 57px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: 50%;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-position: 50%;
+    height: 518px;
+  }
 }
 
 .intro__image {
   display: block;
   padding-top: 90px;
-  padding-bottom: 85px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 77px;
+    width: 460px;
+  }
 }

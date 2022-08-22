@@ -1,14 +1,29 @@
 .intro-short {
-  background-image: url("../img/intro-background-short.jpg");
+  background-image: url("../img/intro-background.jpg");
   background-repeat: no-repeat;
-  min-height: 158px;
+  height: 158px;
+  background-color: #5d3434bf;
+  background-position: 50% -300px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/intro-triangle.svg.svg");
+    height: 57px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: 50%;
+  }
 
   @media (min-width: @tablet-width) {
-    min-height: 290px;
+    background-position: 50% -200px;
+    height: 290px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 301px;
+    height: 301px;
   }
 }
 
@@ -21,9 +36,11 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 95px;
+    width: 457px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 101px;
+    width: 460px;
   }
 }

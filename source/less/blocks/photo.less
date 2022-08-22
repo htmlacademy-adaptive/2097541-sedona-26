@@ -5,7 +5,7 @@
   margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 62px 60px 0;
+    padding: 62px 60px 0;
     margin-bottom: 58px;
   }
 
@@ -28,7 +28,9 @@
   }
 
   & li:last-child {
-    margin-bottom: 25px;
+    @media (max-width: calc(@tablet-width -1)) {
+      margin-bottom: 25px;
+    }
   }
 }
 

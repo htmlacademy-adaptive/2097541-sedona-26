@@ -52,13 +52,17 @@
 
 .card__wrapper-image {
   margin-bottom: 15px;
+  width: 280px;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+    width: 648px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
+    width: 1200px;
   }
 }
 
@@ -77,5 +81,6 @@
     color: #ffffff;
     display: flex;
     justify-content: space-between;
+    background: rgba(0, 0, 0, 0.3);
   }
 }
