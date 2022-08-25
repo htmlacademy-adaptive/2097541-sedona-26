@@ -6,14 +6,52 @@
   width: 100%;
   .last-element-margin-bottom();
 
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #e5e5e5;
+  }
+
   @media (min-width: @tablet-width) {
     width: 648px;
     padding: 63px 0 48px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      right: 0;
+      width: 123px;
+      top: 75px;
+      background: #e5e5e5;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      left: 0;
+      width: 123px;
+      top: 75px;
+      background: #e5e5e5;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 960px;
     padding: 71px 0 47px 0;
+
+    &::before {
+      width: 280px;
+    }
+
+    &::after {
+      width: 280px;
+    }
   }
 }
 

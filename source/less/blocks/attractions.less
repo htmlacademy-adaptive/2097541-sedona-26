@@ -4,6 +4,16 @@
   padding: 24px 0;
   margin: 0;
 
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #e5e5e5;
+  }
+
   @media (max-width: @tablet-width) {
     & :last-child {
       margin-bottom: 0;
@@ -14,10 +24,38 @@
     width: 648px;
     padding-top: 0;
     padding-bottom: 42px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      right: 0;
+      width: 123px;
+      top: 30px;
+      background: #e5e5e5;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      left: 0;
+      width: 123px;
+      top: 30px;
+      background: #e5e5e5;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 960px;
+
+    &::before {
+      width: 280px;
+    }
+
+    &::after {
+      width: 280px;
+    }
   }
 }
 
@@ -43,7 +81,7 @@
   display: flex;
   margin-bottom: 16px;
 
-  @media (min-width: @tablet-width) and (max-width: calc(@tablet-width -1)) {
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
     width: 224px;
   }
 
