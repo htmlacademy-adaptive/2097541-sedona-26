@@ -1,0 +1,134 @@
+.modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 323px;
+  background: #ffffff;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  padding: 36px 20px 20px;
+  box-sizing: border-box;
+  top: 402px;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 640px;
+    height: 347px;
+    padding: 53px 91px 44px;
+    top: 162px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 51px 91px 44px;
+    top: 145px;
+  }
+
+  &--button-decore::after {
+    content: "";
+    position: absolute;
+    height: 98px;
+    background: #f2f2f2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    @media (min-width: @tablet-width) {
+      height: 146px;
+    }
+  }
+
+  &--mistake {
+    height: 280px;
+    padding: 45px 42px 35px;
+
+    @media (min-width: @tablet-width) {
+      width: 400px;
+      height: 347px;
+      padding: 50px 47px 49px;
+      top: 283px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 48px 47px 49px;
+      top: 244px;
+    }
+  }
+}
+
+.modal__container {
+  display: flex;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+}
+
+
+.modal__title {
+  .title();
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  &--mistake {
+    @media (min-width: @tablet-width) {
+      padding: 0 30px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.modal__description {
+  text-align: center;
+  margin-bottom: 79px;
+  margin-top: 0;
+  padding: 0 18px;
+  flex-grow: 1;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  &--mistake {
+    margin-bottom: 28px;
+    padding: 0;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.modal__button {
+  width: 280px;
+  height: 58px;
+  background: #81b3d2;
+  border: none;
+  padding: 18px 20px 14px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    width: 458px;
+  }
+
+  &--mistake {
+    width: 180px;
+
+    @media (min-width: @tablet-width) {
+      width: 272px;
+    }
+  }
+}
