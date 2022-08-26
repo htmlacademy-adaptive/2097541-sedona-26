@@ -13,7 +13,7 @@
     <a class="main-header__logo logo">
       <img class="logo__image" src="./img/logo.svg" height="96" width="185" alt="Логотип Седоны">
     </a>
-    <nav class="main-nav main-nav--closed">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -208,21 +208,22 @@
       </a>
     </div>
   </footer>
-<div class="modal__container">
-  <section class="modal modal--mistake visually-hidden">
+
+<div class="modal__container visually-hidden">
+  <section class="modal modal--mistake">
     <h2 class="modal__title modal__title--mistake">Что-то пошло не так!</h2>
     <p class="modal__description modal__description--mistake">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
     <button class="modal__button modal__button--mistake" type="button">Ок</button>
     </section>
   </div>
 
-  <div class="modal__container">
-    <section class="modal modal--button-decore visually-hidden">
+  <div class="modal__container visually-hidden">
+    <section class="modal modal--button-decore">
       <h2 class="modal__title">Ваш отзыв отправлен!</h2>
       <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
       <button class="modal__button" type="button">Закрыть окно</button>
     </section>
   </div>
+  <script src="script.js"></script>
 </body>
-
 </html>
