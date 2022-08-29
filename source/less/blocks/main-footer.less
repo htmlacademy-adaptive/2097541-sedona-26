@@ -3,11 +3,17 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
-  padding: 38px 20px 18px;
+  padding: 28px 18px 23px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    padding: 36px 60px 45px;
+    padding: 36px 60px 34px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    padding: 36px 120px 36px 104px;
+    justify-content: space-between;
   }
 }
 
@@ -18,12 +24,17 @@
   margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
-    margin-right: 97px;
+    margin-right: 107px;
+    margin-bottom: 5px;
   }
 }
 
 .main-footer__list {
   @media (min-width: @tablet-width) {
-    margin-right: 100px;
+    margin-right: 120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
   }
 }

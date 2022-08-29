@@ -1,6 +1,30 @@
 .intro-short {
-  background-image: url("../img/intro-background-short.jpg");
+  background-image: url("../img/intro-background.jpg");
   background-repeat: no-repeat;
+  height: 158px;
+  background-color: #5d3434bf;
+  background-position: 50% -300px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/intro-triangle.svg.svg");
+    height: 57px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: 50%;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-position: 50% -200px;
+    height: 290px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 301px;
+  }
 }
 
 .intro-short__image {
@@ -9,4 +33,14 @@
   padding-bottom: 67px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 95px;
+    width: 457px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 101px;
+    width: 460px;
+  }
 }

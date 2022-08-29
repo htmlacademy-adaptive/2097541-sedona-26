@@ -13,11 +13,8 @@
     <a class="main-header__logo logo">
       <img class="logo__image" src="./img/logo.svg" height="96" width="185" alt="Логотип Седоны">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
-        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z" fill="#81B3D2" />
-        </svg>
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__container">
@@ -28,7 +25,6 @@
           <li class="site-list__item site-list__item--current">
             <a class="site-list__link">Фото и видео</a>
           </li>
-          <li class="site-list__item site-list__space"></li>
           <li class="site-list__item">
             <a class="site-list__link" href="form.html">Форма отзыва</a>
           </li>
@@ -46,12 +42,12 @@
     </div>
     <section class="photo">
       <h1 class="photo__title">Фото и видео</h1>
-      <p class="photo__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
+      <p class="photo__description">Не можете решиться на путешествие из-за курса?<br class="advantages--br-tablet advantages--br-desktop"> Фотографии помогут вам забыть о
         политике и экономике.</p>
       <ul class="photo__list">
         <li class="photo__item card card--stretched">
           <div class="card__wrapper-image">
-            <img class="card__image" src="./img/non-native-spaces.jpg" alt="Дорога на фоне заката">
+            <img class="card__image" src="./img/kebab-case/non-native-spaces.jpg" width="280" height="280" alt="Дорога на фоне заката">
           </div>
           <div class="card__wrapper">
             <div class="card-wrapper-text">
@@ -59,7 +55,7 @@
               <p class="card__description">Автор фото: Борис</p>
             </div>
             <div class="card__like like">
-              <button class="like__button" type="button"></button>
+              <a class="like__button" title="поставить лайк"></a>
               <span class="like__value">1350</span>
             </div>
           </div>
@@ -67,7 +63,7 @@
 
         <li class="photo__item card">
           <div class="card__wrapper-image">
-            <img class="card__image" src="./img/local-vegetation.jpg" alt="Растениен а фоне скал">
+            <img class="card__image" src="./img/kebab-case/local-vegetation.jpg" width="280" height="280" alt="Растениен а фоне скал">
           </div>
           <div class="card__wrapper">
             <div class="card-wrapper-text">
@@ -75,7 +71,7 @@
               <p class="card__description">Автор фото: Сергей</p>
             </div>
             <div class="card__like like">
-              <button class="like__button" type="button"></button>
+              <a class="like__button" title="поставить лайк"></a>
               <span class="like__value">143</span>
             </div>
           </div>
@@ -83,7 +79,7 @@
 
         <li class="photo__item card">
           <div class="card__wrapper-image">
-            <img class="card__image" src="./img/Road-north.jpg" alt="Серпантин дорога на склоне горы">
+            <img class="card__image" src="./img/kebab-case/road-north.jpg" width="280" height="280" alt="Серпантин дорога на склоне горы">
           </div>
           <div class="card__wrapper">
             <div class="card-wrapper-text">
@@ -91,7 +87,7 @@
               <p class="card__description">Автор фото: Петр</p>
             </div>
             <div class="card__like like">
-              <button class="like__button" type="button"></button>
+              <a class="like__button" title="поставить лайк"></a>
               <span class="like__value">96</span>
             </div>
           </div>
@@ -99,7 +95,7 @@
 
         <li class="photo__item card">
           <div class="card__wrapper-image">
-            <img class="card__image" src="./img/devils-bridge.jpg" alt="Скала в форме моста">
+            <img class="card__image" src="./img/kebab-case/devils-bridge.jpg" width="280" height="280" alt="Скала в форме моста">
           </div>
           <div class="card__wrapper">
             <div class="card-wrapper-text">
@@ -107,7 +103,7 @@
               <p class="card__description">Автор фото: Антон</p>
             </div>
             <div class="card__like like">
-              <button class="like__button" type="button"></button>
+              <a class="like__button" title="поставить лайк"></a>
               <span class="like__value">254</span>
             </div>
           </div>
@@ -121,7 +117,9 @@
         <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
           раз!</p>
       </div>
-      <video class="video__movie" src="#"> Ваш браузер не поддерживает видео</video>
+      <div class="video__wrapper-image">
+        <img class="video__image" src="./img/catalog-video.jpg" width="280" height="177" alt="Видеопрезентация Седоны">
+      </div>
     </section>
   </main>
 
@@ -168,11 +166,11 @@
     </ul>
     <div class="main-footer__copyright copyright">
       <span class="copyright__description">Разработано</span>
-      <a class="copyright__link logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="logo-htmlacademy-image" src="./img/htmlacademy.svg" alt="Логотип HtmlAcademy">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img class="copyright__image" src="./img/htmlacademy.svg" alt="Логотип HtmlAcademy">
       </a>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,23 +1,82 @@
 .main-nav {
-  padding-top: 17px;
+  min-height: 56px;
+  position: relative;
 
   @media (min-width: 768px) {
     padding: 0;
   }
 }
 
-.main-nav__toggle {
-  display: block;
-  margin-right: 20px;
-  margin-left: auto;
-  margin-bottom: 17px;
+.main-nav--closed .main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 63px;
+  height: 56px;
+  padding: 0;
+  border: none;
+  background-color: #ffffff;
+  z-index: 2;
+  cursor: pointer;
 
   @media (min-width: 768px) {
     display: none;
   }
 }
 
-.main-nav__container {
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 23px;
+  height: 4px;
+  background-color: #81b3d2;
+  box-shadow: 0 9px 0 0 #81b3d2, 0 18px 0 0 #81b3d2;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 62px;
+  height: 55px;
+  padding: 0;
+  border: none;
+  background-color: #81b3d2;
+  z-index: 3;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    right: 18px;
+    width: 27px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--closed .main-nav__container {
   display: none;
 
   @media (min-width: 768px) {
@@ -25,6 +84,49 @@
   }
 }
 
+.main-nav--opened .main-nav__container {
+  display: block;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+
+  & :last-child ::after {
+    @media (max-width: 767px) {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 7px;
+      mix-blend-mode: normal;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+      opacity: 0.15;
+    }
+  }
+}
+
 .main-nav__list {
   margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__container {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-nav--nojs .site-list__item {
+    display: block;
+  }
+
+  .main-nav--nojs .site-list__item--current a {
+    padding-right: 21px;
+    padding-left: 21px;
+    text-align: left;
+  }
 }

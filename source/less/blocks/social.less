@@ -2,15 +2,20 @@
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  padding: 0;
+  padding-left: 4px;
   margin-top: 0;
   margin-bottom: 40px;
   .last-element-margin-right();
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
 }
 
 .social__item {
   margin-right: 6px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   background: #81b3d2;
 }
 
