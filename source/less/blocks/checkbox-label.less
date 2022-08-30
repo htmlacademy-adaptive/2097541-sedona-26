@@ -4,17 +4,16 @@
   align-items: center;
 }
 
-.checkbox-label__input {
-  &:checked + .checkbox-label__control::after {
-    content: "";
-    position: absolute;
-    background-image: url("../img/checkbox-mark.svg");
-    top: 15px;
-    left: 12px;
-    width: 22px;
-    height: 16px;
-  }
+.checkbox-label__input:checked + .checkbox-label__control::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/checkbox-mark.svg");
+  top: 15px;
+  left: 12px;
+  width: 22px;
+  height: 16px;
 }
+
 
 .checkbox-label__control {
   position: relative;
