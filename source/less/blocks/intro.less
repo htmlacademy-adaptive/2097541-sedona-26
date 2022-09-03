@@ -2,7 +2,7 @@
   background-image: url("../img/intro-background.jpg");
   background-repeat: no-repeat;
   height: 389px;
-  background-color: #5d3434bf;
+  background-color: #34495dbf;
   background-position: 50% -50px;
   position: relative;
 
@@ -20,6 +20,11 @@
   @media (min-width: @tablet-width) {
     background-position: 50%;
     height: 518px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-background@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 }
 

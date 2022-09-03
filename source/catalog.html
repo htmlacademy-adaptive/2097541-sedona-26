@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Седона. Фото и видео</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -36,18 +40,23 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main-container">
     <div class="intro-short">
       <img class="intro-short__image" src="./img/intro-image-short.svg" alt="Надпись Седона">
     </div>
     <section class="photo">
       <h1 class="photo__title">Фото и видео</h1>
-      <p class="photo__description">Не можете решиться на путешествие из-за курса?<br class="advantages--br-tablet advantages--br-desktop"> Фотографии помогут вам забыть о
+      <p class="photo__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
         политике и экономике.</p>
       <ul class="photo__list">
         <li class="photo__item card card--stretched">
           <div class="card__wrapper-image">
-            <img class="card__image" src="./img/kebab-case/non-native-spaces.jpg" width="280" height="280" alt="Дорога на фоне заката">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/non-native-spaces-desktop.jpg 1x, ./img/non-native-spaces-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/non-native-spaces-tablet.jpg 1x, ./img/non-native-spaces-tablet@2x.jpg 2x">
+            <img class="card__image" src="./img/non-native-spaces-mobile.jpg" srcset="./img/non-native-spaces-mobile@2x.jpg 2x" width="280" height="280"
+              alt="Дорога на фоне заката">
+            </picture>
           </div>
           <div class="card__wrapper">
             <div class="card-wrapper-text">
@@ -63,7 +72,12 @@
 
         <li class="photo__item card">
           <div class="card__wrapper-image">
-            <img class="card__image" src="./img/kebab-case/local-vegetation.jpg" width="280" height="280" alt="Растениен а фоне скал">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/local-vegetation-desktop.jpg 1x, ./img/local-vegetation-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/local-vegetation-tablet.jpg 1x, ./img/local-vegetation-tablet@2x.jpg 2x">
+            <img class="card__image" src="./img/local-vegetation-mobile.jpg" srcset="./img/local-vegetation-mobile@2x.jpg 2x" width="280" height="280"
+              alt="Растениен а фоне скал">
+            </picture>
           </div>
           <div class="card__wrapper">
             <div class="card-wrapper-text">
@@ -79,7 +93,12 @@
 
         <li class="photo__item card">
           <div class="card__wrapper-image">
-            <img class="card__image" src="./img/kebab-case/road-north.jpg" width="280" height="280" alt="Серпантин дорога на склоне горы">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/road-north-desktop.jpg 1x, ./img/road-north-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/road-north-tablet.jpg 1x, ./img/road-north-tablet@2x.jpg 2x">
+            <img class="card__image" src="./img/road-north-mobile.jpg" srcset="./img/road-north-mobile@2x.jpg 2x" width="280" height="280"
+              alt="Серпантин дорога на склоне горы">
+            </picture>
           </div>
           <div class="card__wrapper">
             <div class="card-wrapper-text">
@@ -95,7 +114,11 @@
 
         <li class="photo__item card">
           <div class="card__wrapper-image">
-            <img class="card__image" src="./img/kebab-case/devils-bridge.jpg" width="280" height="280" alt="Скала в форме моста">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/devils-bridge-desktop.jpg 1x, ./img/devils-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/devils-bridge-tablet.jpg 1x, ./img/devils-bridge-tablet@2x.jpg 2x">
+            <img class="card__image" src="./img/devils-bridge-mobile.jpg" srcset="./img/devils-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Скала в форме моста">
+            </picture>
           </div>
           <div class="card__wrapper">
             <div class="card-wrapper-text">
@@ -173,4 +196,5 @@
   </footer>
   <script src="script.js"></script>
 </body>
+
 </html>

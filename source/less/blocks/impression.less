@@ -4,7 +4,11 @@
   padding: 24px 0;
   margin: 0;
   width: 100%;
-  .last-element-margin-bottom();
+
+  @media (max-width: 1199px) {
+
+    .last-element-margin-bottom();
+  }
 
   &::after {
     content: "";
@@ -61,6 +65,14 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 53px;
+
+    & label:nth-child(3n) {
+      width: 238px;
+    }
+  }
 }
 
 .impression__label {
@@ -72,6 +84,10 @@
   @media (min-width: @tablet-width) {
     width: 280px;
     margin-bottom: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 28px;
   }
 }
 

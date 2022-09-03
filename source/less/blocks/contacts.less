@@ -39,6 +39,24 @@
       background-color: #dbdbdb;
       transform: rotate(90deg);
     }
+
+    &--right {
+      @media (min-width: @tablet-width) and (max-width: 1199px) {
+        padding-left: 22px;
+
+        & .contacts__label {
+          padding-left: 22px;
+        }
+
+        & .contacts__text {
+          padding-left: 38px;
+        }
+      }
+
+      @media (min-width: @desktop-width) {
+        padding-left: 64px;
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -66,16 +84,6 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
-
-  &--right {
-    @media (min-width: @tablet-width) {
-      padding-left: 44px;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding-left: 64px;
-    }
-  }
 }
 
 .contacts__title {
@@ -99,7 +107,7 @@
 }
 
 .contacts__input {
-  font-family: "PT Sans", "Arial", sans-serif;
+  .ptsans();
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
