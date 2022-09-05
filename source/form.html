@@ -14,7 +14,7 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo logo">
+    <a class="main-header__logo logo" href="index.html">
       <img class="logo__image" src="./img/logo.svg" height="96" width="185" alt="Логотип Седоны">
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -52,26 +52,20 @@
         <fieldset class="review__group contacts contacts--decore-line">
           <h2 class="contacts__title">Представьтесь:</h2>
 
-          <span class="contacts__text">Имя*:</span>
-          <label class="contacts__label" for="name">
+          <label class="contacts__label" for="name">Имя*:</label>
             <input class="contacts__input" type="text" name="name" id="name" required>
-          </label>
 
-          <span class="contacts__text">Фамилия*:</span>
-          <label class="contacts__label" for="surname">
+          <label class="contacts__label" for="surname">Фамилия*:</label>
             <input class="contacts__input" type="text" name="surname" id="surname" required>
-          </label>
 
-          <span class="contacts__text">Отчество:</span>
-          <label class="contacts__label" for="patronymic">
+          <label class="contacts__label" for="patronymic">Отчество:</label>
             <input class="contacts__input" type="text" name="patronymic" id="patronymic" required>
-          </label>
+
         </fieldset>
 
         <fieldset class="review__group contacts contacts--right">
           <h2 class="contacts__title">Контактная информация:</h2>
-          <span class="contacts__text">Контактный телефон*:</span>
-          <label class="contacts__label" for="phone">
+          <label class="contacts__label" for="phone">Контактный телефон*:</label>
             <div class="contacts__wrapper-input">
               <input class="contacts__input contacts__input--size" type="tel" name="phone" id="phone"
                 placeholder="Введите телефон" required>
@@ -84,10 +78,8 @@
                 </svg>
               </span>
             </div>
-          </label>
 
-          <span class="contacts__text">Электронная почта*:</span>
-          <label class="contacts__label" for="email">
+          <label class="contacts__label" for="email">Электронная почта*:</label>
             <div class="contacts__wrapper-input">
               <input class="contacts__input contacts__input--size" type="email" name="e-mail" id="email"
                 placeholder="Введите e-mail" required>
@@ -100,7 +92,6 @@
                 </svg>
               </span>
             </div>
-          </label>
         </fieldset>
 
         <fieldset class="review__group impression">
@@ -219,10 +210,10 @@
 
   <div class="modal__container">
     <section class="modal modal--mistake">
-      <h2 class="modal__title modal__title--mistake">Что-то пошло не так!</h2>
-      <p class="modal__description modal__description--mistake">Проверьте поля, выделенные красным, скорее всего вы
+      <h2 class="modal__title">Что-то пошло не так!</h2>
+      <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы
         забыли их заполнить</p>
-      <button class="modal__button modal__button--mistake" type="button">Ок</button>
+      <button class="modal__button" type="button">Ок</button>
     </section>
   </div>
 

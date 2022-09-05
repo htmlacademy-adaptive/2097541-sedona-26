@@ -19,6 +19,7 @@
     flex-wrap: wrap;
     text-align: center;
     padding-left: 1.5px;
+    z-index: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -27,6 +28,10 @@
 }
 
 .site-list .site-list__link {
+  &:visited {
+    color: #000000;
+  }
+
   @media (max-width: 767px) {
     display: block;
     padding: 17px 20px 12px;
