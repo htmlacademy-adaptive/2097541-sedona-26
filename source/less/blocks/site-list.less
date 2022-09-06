@@ -28,14 +28,6 @@
 }
 
 .site-list .site-list__link {
-  &:visited {
-    color: #000000;
-
-    @media (max-width: @tablet-width) {
-      color: #ffffff;
-    }
-  }
-
   @media (max-width: 767px) {
     display: block;
     padding: 17px 20px 12px;
@@ -68,6 +60,10 @@
     &:nth-child(4n+2) {
       margin-right: 153px;
     }
+
+    &.site-list__item--current {
+      color: #766357;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -84,4 +80,24 @@
 
 .site-list__link {
   text-decoration: none;
+  color: #000000;
+
+  &:hover {
+    color: #81b3d2;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: @tablet-width) {
+    &:hover {
+      background: #669ec0;
+    }
+
+    &:active {
+      background: #5496bd;
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
 }
