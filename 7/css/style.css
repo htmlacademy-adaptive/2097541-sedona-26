@@ -81,6 +81,12 @@
   z-index: 2;
   cursor: pointer;
 }
+.main-nav--closed .main-nav__toggle:hover {
+  opacity: 0.6;
+}
+.main-nav--closed .main-nav__toggle:active {
+  opacity: 0.3;
+}
 @media (min-width: 768px) {
   .main-nav--closed .main-nav__toggle {
     display: none;
@@ -112,6 +118,12 @@
   background-color: #81b3d2;
   z-index: 3;
   cursor: pointer;
+}
+.main-nav--opened .main-nav__toggle:hover {
+  opacity: 0.6;
+}
+.main-nav--opened .main-nav__toggle:active {
+  opacity: 0.3;
 }
 @media (min-width: 768px) {
   .main-nav--opened .main-nav__toggle {
@@ -212,9 +224,6 @@
     padding-left: 0;
   }
 }
-.site-list .site-list__link:visited {
-  color: #000000;
-}
 @media (max-width: 767px) {
   .site-list .site-list__link {
     display: block;
@@ -234,6 +243,11 @@
   font-weight: 700;
   width: 320px;
 }
+@media (max-width: 768px) {
+  .site-list__item {
+    color: #ffffff;
+  }
+}
 @media (min-width: 768px) {
   .site-list__item {
     justify-self: center;
@@ -243,6 +257,9 @@
   }
   .site-list__item:nth-child(4n+2) {
     margin-right: 153px;
+  }
+  .site-list__item.site-list__item--current {
+    color: #766357;
   }
 }
 @media (min-width: 1200px) {
@@ -258,6 +275,22 @@
 }
 .site-list__link {
   text-decoration: none;
+  color: #000000;
+}
+.site-list__link:hover {
+  color: #81b3d2;
+}
+.site-list__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+  .site-list__link:hover {
+    background: #669ec0;
+  }
+  .site-list__link:active {
+    background: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 .logo {
   display: flex;
@@ -606,12 +639,23 @@
   border: none;
   background: #81b3d2;
   text-transform: uppercase;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .search-hotel__button {
     padding: 14px 20 17px;
     width: 458px;
   }
+}
+.search-hotel__button:hover {
+  background: #669ec0;
+}
+.search-hotel__button:active {
+  background: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+.search-hotel__button:disabled {
+  background: #e5e5e5;
 }
 .sedona-map {
   border: none;
@@ -695,6 +739,13 @@
   margin-bottom: 6px;
   background: #81b3d2;
 }
+.social__item:hover {
+  background: #669ec0;
+}
+.social__item:active {
+  background: #5496bd;
+  fill-opacity: 0.3;
+}
 .social__link {
   display: flex;
   align-items: center;
@@ -708,17 +759,28 @@
 }
 .copyright__description {
   margin-right: 13px;
-  color: #000000;
   padding: 7px 0 6px;
 }
 .copyright__image {
   display: block;
+}
+.copyright__link {
+  display: flex;
+  color: #000000;
+  text-decoration: none;
+}
+.copyright__link:hover {
+  color: #81b3d2;
+}
+.copyright__link:active {
+  color: #b3b3b3;
 }
 .like {
   display: flex;
 }
 .like__button {
   margin-right: 14px;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .like__button {
@@ -732,6 +794,16 @@
 }
 .like__value {
   font-weight: 700;
+}
+.like__icon {
+  fill: #000000;
+  opacity: 0.3;
+}
+@media (min-width: 1200px) {
+  .like__icon {
+    fill: #ffffff;
+    opacity: 1;
+  }
 }
 .card {
   position: relative;
@@ -1128,6 +1200,7 @@
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .review__button {
@@ -1139,6 +1212,16 @@
     width: 384px;
     margin-left: 96px;
   }
+}
+.review__button:hover {
+  background: #669ec0;
+}
+.review__button:active {
+  background: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+.review__button:disabled {
+  background: #e5e5e5;
 }
 .review__legend {
   font-size: 12px;
@@ -1285,6 +1368,16 @@
   .contacts__input--size {
     width: 344px;
   }
+}
+.contacts__input:hover {
+  background: #e5e5e5;
+}
+.contacts__input:focus {
+  outline: none;
+}
+.contacts__input:active {
+  background: #ffffff;
+  outline: 4px solid #e5e5e5;
 }
 .contacts__wrapper-input {
   display: flex;
@@ -1631,7 +1724,7 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  background: #000000;
+  background: #333333;
   border-radius: 50%;
   top: 16px;
   left: 16px;
@@ -1645,6 +1738,15 @@
   border-radius: 50%;
   cursor: pointer;
 }
+.radio-label__control:hover {
+  background: #e5e5e5;
+}
+.radio-label__control:active {
+  background: #d5d5d5;
+}
+.radio-label__control:active.radio-label__control::after {
+  background: rgba(51, 51, 51, 0.3);
+}
 .radio-label__description {
   display: flex;
   align-items: center;
@@ -1654,14 +1756,16 @@
   display: flex;
   align-items: center;
 }
-.checkbox-label__input:checked + .checkbox-label__control::after {
-  content: "";
-  position: absolute;
-  background-image: url("../img/checkbox-mark.svg");
-  top: 15px;
-  left: 12px;
-  width: 22px;
-  height: 16px;
+.checkbox-label__mark {
+  display: none;
+}
+.checkbox-label__input:checked + .checkbox-label__control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox-label__input:checked + .checkbox-label__control .checkbox-label__mark {
+  display: block;
 }
 .checkbox-label__control {
   position: relative;
@@ -1671,6 +1775,15 @@
   background: #f2f2f2;
   border-radius: 4px;
   cursor: pointer;
+}
+.checkbox-label__control:hover {
+  background: #e5e5e5;
+}
+.checkbox-label__control:active {
+  background: #d5d5d5;
+}
+.checkbox-label__control:active .checkbox-label__mark {
+  fill: rgba(51, 51, 51, 0.3);
 }
 .modal {
   position: absolute;
@@ -1806,6 +1919,16 @@
   .modal__button {
     width: 458px;
   }
+}
+.modal__button:hover {
+  background: #669ec0;
+}
+.modal__button:active {
+  background: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+.modal__button:disabled {
+  background: #e5e5e5;
 }
 .br {
   display: none;

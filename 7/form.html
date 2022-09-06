@@ -54,13 +54,13 @@
           <h2 class="contacts__title">Представьтесь:</h2>
 
           <label class="contacts__label" for="name">Имя*:</label>
-          <input class="contacts__input" type="text" name="name" id="name" required>
+          <input class="contacts__input" type="text" name="name" id="name" placeholder="Имя" required>
 
           <label class="contacts__label" for="surname">Фамилия*:</label>
-          <input class="contacts__input" type="text" name="surname" id="surname" required>
+          <input class="contacts__input" type="text" name="surname" id="surname" placeholder="Фамилия" required>
 
           <label class="contacts__label" for="patronymic">Отчество:</label>
-          <input class="contacts__input" type="text" name="patronymic" id="patronymic" required>
+          <input class="contacts__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество" required>
 
         </fieldset>
 
@@ -120,26 +120,42 @@
             <label class="attractions__label checkbox-label">
               <input class="checkbox-label__input visually-hidden" type="checkbox" name="bridge" value="Devil's bridge"
                 checked>
-              <span class="checkbox-label__control"></span>
+              <span class="checkbox-label__control">
+                <svg class="checkbox-label__mark" width="22" height="16" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg">
+                  <use href="img/sprite.svg#checkbox-mark"></use>
+                  </svg>
+              </span>
               <span class="checkbox-label__description">Мост Дьявола</span>
             </label>
 
             <label class="attractions__label checkbox-label">
               <input class="checkbox-label__input visually-hidden" type="checkbox" name="mountain" value="mountain-bell"
                 checked>
-              <span class="checkbox-label__control"></span>
+              <span class="checkbox-label__control">
+                <svg class="checkbox-label__mark" width="22" height="16" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg">
+                  <use href="img/sprite.svg#checkbox-mark"></use>
+                  </svg>
+              </span>
               <span class="checkbox-label__description">Гора-Колокол</span>
             </label>
 
             <label class="attractions__label checkbox-label">
               <input class="checkbox-label__input visually-hidden" type="checkbox" name="park" value="park" checked>
-              <span class="checkbox-label__control"></span>
+              <span class="checkbox-label__control">
+                <svg class="checkbox-label__mark" width="22" height="16" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg">
+                  <use href="img/sprite.svg#checkbox-mark"></use>
+                  </svg>
+              </span>
               <span class="checkbox-label__description">Слайд-парк</span>
             </label>
 
             <label class="attractions__label checkbox-label">
               <input class="checkbox-label__input visually-hidden" type="checkbox" name="rocks" value="red rocks">
-              <span class="checkbox-label__control"></span>
+              <span class="checkbox-label__control">
+                <svg class="checkbox-label__mark" width="22" height="16" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg">
+                  <use href="img/sprite.svg#checkbox-mark"></use>
+                  </svg>
+              </span>
               <span class="checkbox-label__description">Красные скалы</span>
             </label>
           </div>
@@ -185,9 +201,9 @@
       </li>
     </ul>
     <div class="main-footer__copyright copyright">
-      <span class="copyright__description">Разработано</span>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg class="copyright__image" width="27" height="35" viewBox="0 0 27 35" fill="none"
+        <span class="copyright__description">Разработано</span>
+        <svg class="copyright__image" width="27" height="35" viewBox="0 0 27 35"
           xmlns="http://www.w3.org/2000/svg">
           <use href="img/sprite.svg#htmlacademy-icon"></use>
         </svg>
