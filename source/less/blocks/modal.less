@@ -41,16 +41,38 @@
     height: 280px;
     padding: 45px 42px 35px;
 
+    & .modal__description {
+      margin-bottom: 28px;
+      padding: 0;
+
+      @media (min-width: @tablet-width) {
+        margin-bottom: 0;
+      }
+    }
+
     @media (min-width: @tablet-width) {
       width: 400px;
       height: 347px;
       padding: 50px 47px 49px;
       top: 283px;
+
+      & .modal__title {
+        padding: 0 30px;
+        margin-bottom: 40px;
+      }
     }
 
     @media (min-width: @desktop-width) {
       padding: 48px 47px 49px;
       top: 244px;
+    }
+
+    & .modal__button {
+      width: 180px;
+
+      @media (min-width: @tablet-width) {
+        width: 272px;
+      }
     }
   }
 }
@@ -77,13 +99,6 @@
     font-size: 30px;
     margin-bottom: 30px;
   }
-
-  &--mistake {
-    @media (min-width: @tablet-width) {
-      padding: 0 30px;
-      margin-bottom: 40px;
-    }
-  }
 }
 
 .modal__description {
@@ -95,15 +110,6 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 40px;
-  }
-
-  &--mistake {
-    margin-bottom: 28px;
-    padding: 0;
-
-    @media (min-width: @tablet-width) {
-      margin-bottom: 0;
-    }
   }
 }
 
@@ -124,11 +130,16 @@
     width: 458px;
   }
 
-  &--mistake {
-    width: 180px;
+  &:hover {
+    background: #669ec0;
+  }
 
-    @media (min-width: @tablet-width) {
-      width: 272px;
-    }
+  &:active {
+    background: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background: #e5e5e5;
   }
 }

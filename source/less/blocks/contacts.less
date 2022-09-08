@@ -83,7 +83,7 @@
 .contacts__label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
+  padding-left: 16px;
 }
 
 .contacts__title {
@@ -102,16 +102,13 @@
   }
 }
 
-.contacts__text {
-  padding-left: 16px;
-}
-
 .contacts__input {
   .ptsans();
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
+  margin-bottom: 16px;
   width: 280px;
   padding: 16px;
   box-sizing: border-box;
@@ -128,6 +125,19 @@
     @media (min-width: @desktop-width) {
       width: 344px;
     }
+  }
+
+  &:hover {
+    background: #e5e5e5;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background: #ffffff;
+    outline: 4px solid #e5e5e5;
   }
 }
 

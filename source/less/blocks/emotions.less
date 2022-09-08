@@ -71,6 +71,9 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  min-height: 150px;
+  max-width: 279px;
+  min-width: 279px;
   border: 0;
   background: #f2f2f2;
   height: 150px;
@@ -79,10 +82,15 @@
 
   @media (min-width: @tablet-width) {
     height: 160px;
+    min-height: 160px;
+    max-width: 648px;
+    min-width: 648px;
   }
 
   @media (min-width: @desktop-width) {
     width: 768px;
+    max-width: 768px;
+    min-width: 768px;
     margin: 0 auto;
   }
 }

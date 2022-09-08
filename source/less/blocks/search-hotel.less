@@ -48,9 +48,23 @@
   border: none;
   background: #81b3d2;
   text-transform: uppercase;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     padding: 14px 20 17px;
     width: 458px;
+  }
+
+  &:hover {
+    background: #669ec0;
+  }
+
+  &:active {
+    background: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background: #e5e5e5;
   }
 }
