@@ -6,17 +6,6 @@
   background-position: 50% -50px;
   position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    background-image: url("../img/intro-triangle.svg.svg");
-    height: 57px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-position: 50%;
-  }
-
   @media (min-width: @tablet-width) {
     background-position: 50%;
     height: 518px;
@@ -25,6 +14,17 @@
       background-image: url("../img/intro-background@2x.jpg");
       background-size: 1200px auto;
     }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/intro-triangle.svg");
+    height: 57px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: 50%;
   }
 }
 
