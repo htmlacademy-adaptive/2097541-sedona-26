@@ -1,7 +1,9 @@
 let navMain = document.querySelector('.main-nav');
 let navToggle = document.querySelector('.main-nav__toggle');
+let sedonaMap = document.querySelector('.sedona-map__wrapper');
 
 navMain.classList.remove('main-nav--nojs');
+
 
 navToggle.addEventListener('click', function () {
   if (navMain.classList.contains('main-nav--closed')) {
@@ -12,3 +14,5 @@ navToggle.addEventListener('click', function () {
     navMain.classList.remove('main-nav--opened');
   }
 });
+
+sedonaMap.classList.remove('sedona-map__wrapper--nojs');

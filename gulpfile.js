@@ -70,7 +70,7 @@ const createWebP = () => {
 // SVG
 
 const svg = () => {
-  return gulp.src('source/img/*.svg', '!source/img/icons/*.svg')
+  return gulp.src('source/img/*.svg', '!source/img/icons/*.svg', '!source/img/sprite.svg')
   .pipe(svgo())
   .pipe(gulp.dest('build/img'))
 }
@@ -139,11 +139,11 @@ export const build = gulp.series (
   clean,
   copy,
   optimizaImages,
+  svg,
   gulp.parallel (
     styles,
     html,
     scripts,
-    svg,
     sprite,
     createWebP
   ),
@@ -154,11 +154,11 @@ export default gulp.series (
   clean,
   copy,
   copyImages,
+  svg,
   gulp.parallel (
     styles,
     html,
     scripts,
-    svg,
     sprite,
     createWebP
   ),
