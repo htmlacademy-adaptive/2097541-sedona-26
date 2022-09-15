@@ -1,12 +1,12 @@
 .photo {
   display: flex;
   flex-direction: column;
-  padding: 30px 20px 0;
+  padding: 38px 20px 0;
   margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
-    padding: 62px 60px 0;
-    margin-bottom: 58px;
+    padding: 66px 60px 0;
+    margin-bottom: 56px;
   }
 
   @media (min-width: @desktop-width) {
@@ -17,7 +17,7 @@
 
 .photo__list {
   margin: 0;
-  padding-top: 24px;
+  padding-top: 25px;
   padding-left: 0;
   list-style-type: none;
 
@@ -28,7 +28,7 @@
       width: 320px;
       height: 1px;
       left: -20px;
-      top: -24px;
+      top: -25px;
       background: #e5e5e5;
     }
   }
@@ -50,7 +50,12 @@
   .title();
   text-align: center;
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin-bottom: 32px;
+  }
 
   @media (min-width: @desktop-width) {
     font-size: 30px;
@@ -61,15 +66,15 @@
 .photo__description {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 44px;
+  margin-bottom: 36px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 77px;
+    margin-bottom: 81px;
     padding: 0 105px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 70px;
+    margin-bottom: 87px;
     padding: 0 380px;
   }
 }
