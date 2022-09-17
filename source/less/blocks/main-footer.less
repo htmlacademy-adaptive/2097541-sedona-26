@@ -4,6 +4,7 @@
   text-align: center;
   flex-direction: column;
   padding: 31px 18px 23px;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -23,19 +24,18 @@
   margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
-    margin-right: 111px;
     margin-bottom: 5px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 270px;
     margin-bottom: 5px;
   }
 }
 
 .main-footer__list {
   @media (min-width: @tablet-width) {
-    margin-right: 116px;
+    margin-right: auto;
+    max-width: 162px;
   }
 
   @media (min-width: @desktop-width) {
@@ -45,4 +45,17 @@
 
 .main-footer__copyright {
   margin-bottom: 7px;
+}
+
+.main-footer__wrapper {
+  max-width: 166px;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 111px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 270px;
+  }
 }

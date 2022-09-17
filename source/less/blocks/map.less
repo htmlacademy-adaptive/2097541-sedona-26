@@ -1,7 +1,5 @@
-.sedona-map {
-  border: none;
-  width: 320px;
-  height: 350px;
+.map {
+  display: none;
 
   @media (min-width: @tablet-width) {
     width: 768px;
@@ -9,5 +7,9 @@
 
   @media (min-width: @desktop-width) {
     width: 1200px;
+  }
+
+  &--nojs {
+    display: block;
   }
 }

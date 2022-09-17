@@ -1,6 +1,6 @@
 let navMain = document.querySelector('.main-nav');
 let navToggle = document.querySelector('.main-nav__toggle');
-let sedonaMap = document.querySelector('.sedona-map__wrapper');
+let map = document.querySelector('.map');
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -15,4 +15,4 @@ navToggle.addEventListener('click', function () {
   }
 });
 
-sedonaMap.classList.remove('sedona-map__wrapper--nojs');
+map.classList.remove('map--nojs');
