@@ -1,7 +1,7 @@
 .impression {
   display: flex;
   flex-direction: column;
-  padding: 24px 0;
+  padding: 19px 0;
   margin: 0;
   width: 100%;
 
@@ -14,15 +14,15 @@
     content: "";
     position: absolute;
     height: 1px;
-    left: 0;
-    right: 0;
-    top: 0;
+    left: -20px;
+    right: -20px;
+    top: -7px;
     background: #e5e5e5;
   }
 
   @media (min-width: @tablet-width) {
     width: 648px;
-    padding: 63px 0 48px 0;
+    padding: 48px 0 48px 0;
 
     &::before {
       content: "";
@@ -30,7 +30,7 @@
       height: 1px;
       right: 0;
       width: 123px;
-      top: 75px;
+      top: 62px;
       background: #e5e5e5;
     }
 
@@ -40,14 +40,14 @@
       height: 1px;
       left: 0;
       width: 123px;
-      top: 75px;
+      top: 62px;
       background: #e5e5e5;
     }
   }
 
   @media (min-width: @desktop-width) {
     width: 960px;
-    padding: 71px 0 47px 0;
+    padding: 54px 0 57px 0;
 
     &::before {
       width: 280px;
@@ -64,6 +64,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-left: 35px;
   }
 
   @media (min-width: @desktop-width) {
@@ -83,7 +84,8 @@
 
   @media (min-width: @tablet-width) {
     width: 280px;
-    margin-bottom: 26px;
+    margin-bottom: 16px;
+    margin-right: 16px;
   }
 
   @media (min-width: @desktop-width) {

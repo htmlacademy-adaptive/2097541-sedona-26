@@ -15,6 +15,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    position: relative;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
@@ -53,7 +54,7 @@
 
   @media (min-width: @tablet-width) {
     justify-self: center;
-    padding: 18px 20px 17px;
+    padding: 19px 20px 16px;
     width: 153px;
     box-sizing: border-box;
 
@@ -61,14 +62,14 @@
       margin-right: 153px;
     }
 
-    &.site-list__item--current {
+    &--current .site-list__link {
       color: #766357;
     }
   }
 
   @media (min-width: @desktop-width) {
     justify-self: center;
-    padding: 18px 20px 17px;
+    padding: 19px 20px 16px;
     width: 240px;
     box-sizing: border-box;
 

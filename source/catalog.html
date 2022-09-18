@@ -10,6 +10,7 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="../fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -42,7 +43,7 @@
 
   <main class="main-container">
     <div class="intro-short">
-      <img class="intro-short__image" src="./img/intro-image-short.svg" alt="Надпись Седона">
+      <img class="intro-short__image" src="./img/intro-image-short.svg" height="39" width="229" alt="Надпись Седона">
     </div>
     <section class="photo">
       <h1 class="photo__title">Фото и видео</h1>
@@ -51,20 +52,23 @@
       <ul class="photo__list">
         <li class="photo__item card card--stretched">
           <div class="card__wrapper-image">
-            <picture>
-              <source type="image/webp" media="(min-width: 1200px)"
-                srcset="img/non-native-spaces-desktop.webp 1x, img/non-native-spaces-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/non-native-spaces-tablet.webp 1x, img/non-native-spaces-tablet@2x.webp 2x">
-              <source type="image/webp"
-                srcset="img/non-native-spaces-mobile.webp 1x, img/non-native-spaces-mobile@2x.webp 2x">
-              <source media="(min-width: 1200px)"
-                srcset="./img/non-native-spaces-desktop.jpg 1x, ./img/non-native-spaces-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="./img/non-native-spaces-tablet.jpg 1x, ./img/non-native-spaces-tablet@2x.jpg 2x">
-              <img class="card__image" src="./img/non-native-spaces-mobile.jpg"
-                srcset="./img/non-native-spaces-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога на фоне заката">
-            </picture>
+            <a class="card__link" href="./img/non-native-spaces-desktop.jpg">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/non-native-spaces-desktop.webp 1x, img/non-native-spaces-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/non-native-spaces-tablet.webp 1x, img/non-native-spaces-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/non-native-spaces-mobile.webp 1x, img/non-native-spaces-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                  srcset="./img/non-native-spaces-desktop.jpg 1x, ./img/non-native-spaces-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./img/non-native-spaces-tablet.jpg 1x, ./img/non-native-spaces-tablet@2x.jpg 2x">
+                <img class="card__image" src="./img/non-native-spaces-mobile.jpg"
+                  srcset="./img/non-native-spaces-mobile@2x.jpg 2x" width="280" height="280"
+                  alt="Дорога на фоне заката">
+              </picture>
+            </a>
           </div>
           <div class="card__wrapper">
             <div class="card-wrapper-text">
@@ -76,6 +80,7 @@
                 <svg class="like__icon" width="23" height="21" viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg">
                   <use href="img/sprite.svg#like-icon"></use>
                 </svg>
+                <span class="visually-hidden">Поставить лайк</span>
               </a>
               <span class="like__value">1350</span>
             </div>
@@ -84,14 +89,16 @@
 
         <li class="photo__item card">
           <div class="card__wrapper-image">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./img/local-vegetation-desktop.jpg 1x, ./img/local-vegetation-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="./img/local-vegetation-tablet.jpg 1x, ./img/local-vegetation-tablet@2x.jpg 2x">
-              <img class="card__image" src="./img/local-vegetation-mobile.jpg"
-                srcset="./img/local-vegetation-mobile@2x.jpg 2x" width="280" height="280" alt="Растениен а фоне скал">
-            </picture>
+            <a class="card__link" href="./img/local-vegetation-desktop.jpg">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/local-vegetation-desktop.jpg 1x, ./img/local-vegetation-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./img/local-vegetation-tablet.jpg 1x, ./img/local-vegetation-tablet@2x.jpg 2x">
+                <img class="card__image" src="./img/local-vegetation-mobile.jpg"
+                  srcset="./img/local-vegetation-mobile@2x.jpg 2x" width="280" height="280" alt="Растениен а фоне скал">
+              </picture>
+            </a>
           </div>
           <div class="card__wrapper">
             <div class="card-wrapper-text">
@@ -103,6 +110,7 @@
                 <svg class="like__icon" width="23" height="21" viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg">
                   <use href="img/sprite.svg#like-icon"></use>
                 </svg>
+                <span class="visually-hidden">Поставить лайк</span>
               </a>
               <span class="like__value">143</span>
             </div>
@@ -111,14 +119,16 @@
 
         <li class="photo__item card">
           <div class="card__wrapper-image">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./img/road-north-desktop.jpg 1x, ./img/road-north-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="./img/road-north-tablet.jpg 1x, ./img/road-north-tablet@2x.jpg 2x">
-              <img class="card__image" src="./img/road-north-mobile.jpg" srcset="./img/road-north-mobile@2x.jpg 2x"
-                width="280" height="280" alt="Серпантин дорога на склоне горы">
-            </picture>
+            <a class="card__link" href="./img/road-north-desktop.jpg">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/road-north-desktop.jpg 1x, ./img/road-north-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./img/road-north-tablet.jpg 1x, ./img/road-north-tablet@2x.jpg 2x">
+                <img class="card__image" src="./img/road-north-mobile.jpg" srcset="./img/road-north-mobile@2x.jpg 2x"
+                  width="280" height="280" alt="Серпантин дорога на склоне горы">
+              </picture>
+            </a>
           </div>
           <div class="card__wrapper">
             <div class="card-wrapper-text">
@@ -130,6 +140,7 @@
                 <svg class="like__icon" width="23" height="21" viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg">
                   <use href="img/sprite.svg#like-icon"></use>
                 </svg>
+                <span class="visually-hidden">Поставить лайк</span>
               </a>
               <span class="like__value">96</span>
             </div>
@@ -138,14 +149,16 @@
 
         <li class="photo__item card">
           <div class="card__wrapper-image">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./img/devils-bridge-desktop.jpg 1x, ./img/devils-bridge-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-                srcset="./img/devils-bridge-tablet.jpg 1x, ./img/devils-bridge-tablet@2x.jpg 2x">
-              <img class="card__image" src="./img/devils-bridge-mobile.jpg"
-                srcset="./img/devils-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Скала в форме моста">
-            </picture>
+            <a class="card__link" href="./img/devils-bridge-desktop.jpg">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/devils-bridge-desktop.jpg 1x, ./img/devils-bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./img/devils-bridge-tablet.jpg 1x, ./img/devils-bridge-tablet@2x.jpg 2x">
+                <img class="card__image" src="./img/devils-bridge-mobile.jpg"
+                  srcset="./img/devils-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Скала в форме моста">
+              </picture>
+            </a>
           </div>
           <div class="card__wrapper">
             <div class="card-wrapper-text">
@@ -157,6 +170,7 @@
                 <svg class="like__icon" width="23" height="21" viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg">
                   <use href="img/sprite.svg#like-icon"></use>
                 </svg>
+                <span class="visually-hidden">Поставить лайк</span>
               </a>
               <span class="like__value">254</span>
             </div>
@@ -172,13 +186,19 @@
           раз!</p>
       </div>
       <div class="video__wrapper-image">
-        <img class="video__image" src="./img/catalog-video.jpg" width="280" height="177" alt="Видеопрезентация Седоны">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./img/video-desktop.jpg 1x, ./img/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="./img/video-tablet.jpg 1x, ./img/video-tablet@2x.jpg 2x">
+          <img class="video__image" src="./img/video-mobile.jpg" width="280" height="177" alt="Видеопрезентация Седоны">
+        </picture>
       </div>
     </section>
   </main>
 
   <footer class="main-footer">
-    <p class="main-footer__hashtag">#VISITSEDONA</p>
+    <div class="main-footer__wrapper">
+      <p class="main-footer__hashtag">#VISITSEDONA</p>
+    </div>
     <ul class="main-footer__list social">
       <li class="social__item">
         <a class="social__link" href="#">

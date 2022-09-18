@@ -10,6 +10,7 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="../fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -42,7 +43,7 @@
 
   <main class="main-container">
     <div class="intro-short">
-      <img class="intro-short__image" src="./img/intro-image-short.svg" alt="Надпись Седона">
+      <img class="intro-short__image" src="./img/intro-image-short.svg" height="39" width="229" alt="Надпись Седона">
     </div>
     <section class="review">
       <h1 class="review__title">Оставьте свой отзыв</h1>
@@ -172,7 +173,8 @@
 
         <fieldset class="review__group emotions">
           <h2 class="emotions__title">Опишите свои эмоции:</h2>
-          <textarea class="emotions__input" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+          <textarea class="emotions__input" name="emotions" aria-label="Опишите подробно все свои восторги"
+            placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
 
         <button class="review__button" type="submit">Отправить отзыв</button>
@@ -182,7 +184,9 @@
   </main>
 
   <footer class="main-footer">
-    <p class="main-footer__hashtag">#VISITSEDONA</p>
+    <div class="main-footer__wrapper">
+      <p class="main-footer__hashtag">#VISITSEDONA</p>
+    </div>
     <ul class="main-footer__list social">
       <li class="social__item">
         <a class="social__link" href="#">
@@ -220,7 +224,7 @@
     </div>
   </footer>
 
-  <div class="modal__container">
+  <div class="modal-container">
     <section class="modal modal--mistake">
       <h2 class="modal__title">Что-то пошло не так!</h2>
       <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы
@@ -229,7 +233,7 @@
     </section>
   </div>
 
-  <div class="modal__container">
+  <div class="modal-container">
     <section class="modal modal--button-decore">
       <h2 class="modal__title">Ваш отзыв отправлен!</h2>
       <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы

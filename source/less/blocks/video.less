@@ -4,10 +4,10 @@
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 40px;
+    margin-bottom: 44px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     margin-bottom: 84px;
   }
 }
@@ -32,6 +32,11 @@
   margin-top: 0;
   margin-bottom: 27px;
 
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin-bottom: 32px;
+  }
+
   @media (min-width: @desktop-width) {
     font-size: 30px;
     line-height: 26px;
@@ -42,6 +47,10 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .video__wrapper-image {
@@ -56,6 +65,8 @@
 
 .video__image {
   display: block;
+  object-fit: contain;
+  width: 280px;
 
   @media (min-width: @tablet-width) {
     width: 648px;
